@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="substratum.theme.template"
+          android:installLocation="internalOnly">
+
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+	
+	<uses-feature
+        android:name="projekt.substratum.theme"
+        android:required="false" /> <!-- Set to true for block to be enabled -->
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/ThemeName"
+        android:supportsRtl="true"
+        android:theme="@style/DialogStyle"
+        tools:node="replace"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <activity android:name="substratum.theme.template.SubstratumLauncher">
+            <intent-filter>
+                <action android:name="projekt.substratum.THEME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="projekt.substratum.GET_KEYS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="Substratum_Legacy"
+            android:value="@bool/ThemeSupportLegacy"/>
+        <meta-data
+            android:name="Substratum_Name"
+            android:value="@string/ThemeName"/>
+        <meta-data
+            android:name="Substratum_Author"
+            android:value="@string/ThemeAuthor"/>
+        <meta-data
+            android:name="Substratum_Email"
+            android:value="@string/ThemeAuthorEmail"/>
+        <meta-data
+            android:name="Substratum_Samsung"
+            android:value="@bool/ThemeSupportSamsung"/>
+        <meta-data
+            android:name="Substratum_ThemeReady"
+            android:value="@string/ThemeReadyRequirement"/>
+        <meta-data
+            android:name="Substratum_Wallpapers"
+            android:value="@string/ThemeWallpaperSource"/>
+
+        <!-- SUBSTRATUM INTERNAL USE: DO NOT TOUCH -->
+        <meta-data
+            android:name="Substratum_Plugin"
+            android:value="10.0.2"/>
+        <meta-data
+            android:name="Substratum_Encryption"
+            android:value="@string/encryption_status"/>
+        <meta-data
+            android:name="supports_third_party_theme_systems"
+            android:value="@bool/SUPPORTS_THIRD_PARTY_THEME_SYSTEMS" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,161 @@
+import groovy.io.FileType
+
+import javax.crypto.Cipher
+import javax.crypto.SecretKey
+import javax.crypto.spec.IvParameterSpec
+import javax.crypto.spec.SecretKeySpec
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+ext {
+    // Whether the theme assets should be encrypted or not
+    SHOULD_ENCRYPT_ASSETS = false
+
+    // Whether this theme supports third party theme systems
+    SUPPORTS_THIRD_PARTY_SYSTEMS = false
+
+    // SUBSTRATUM INTERNAL VALUES: DO NOT TOUCH
+    byte[] key = new byte[16]
+    new Random().nextBytes(key)
+    KEY = key
+    byte[] iv = new byte[16]
+    new Random().nextBytes(iv)
+    IV_KEY = iv
+}
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        applicationId "it.folgore95.pixel"
+        minSdkVersion 24
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        buildConfigField "String", "IV_KEY", "\"" + IV_KEY + "\""
+        buildConfigField "byte[]", "DECRYPTION_KEY", String.valueOf("\"" + KEY + "\"").replace("\"", "").replace("[", "{").replace("]", "}")
+        buildConfigField "byte[]", "IV_KEY", String.valueOf("\"" + IV_KEY + "\"").replace("\"", "").replace("[", "{").replace("]", "}")
+        resValue "string", "encryption_status", (shouldEncrypt() ? "onCompileVerify" : "false")
+
+        buildConfigField "boolean", "SUPPORTS_THIRD_PARTY_THEME_SYSTEMS", "" + SUPPORTS_THIRD_PARTY_SYSTEMS
+        resValue "bool", "SUPPORTS_THIRD_PARTY_THEME_SYSTEMS", "" + SUPPORTS_THIRD_PARTY_SYSTEMS
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.github.javiersantos:PiracyChecker:1.1'
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version") {
+        transitive = true
+    }
+}
+
+task encryptAssets {
+    if (!shouldEncrypt()) {
+        println("skipping assets encryption...")
+        return
+    }
+
+    def tempAssets = new File(getProjectDir(), "/src/main/assets-temp")
+    if (!tempAssets.exists()) {
+        println("encrypting assets...")
+        def list = []
+        def dir = new File(getProjectDir(), "/src/main/assets")
+        dir.eachFileRecurse(FileType.FILES) { file ->
+            list << file
+
+            FileInputStream fis = new FileInputStream(file)
+            File fo = new File(file.getAbsolutePath().replace("assets", "assets-temp"))
+            fo.getParentFile().mkdirs()
+            FileOutputStream fos = new FileOutputStream(fo)
+            byte[] buffer = new byte[4096]
+            int n
+            while ((n = fis.read(buffer)) != -1) {
+                fos.write(buffer, 0, n)
+            }
+            fis.close()
+            fos.close()
+        }
+
+        list.each {
+            if (it.getAbsolutePath().contains("overlays")) {
+                Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
+                SecretKey secret = new SecretKeySpec(KEY, "AES")
+                IvParameterSpec iv = new IvParameterSpec(IV_KEY)
+
+                cipher.init(Cipher.ENCRYPT_MODE, secret, iv)
+                FileInputStream fis = new FileInputStream(it)
+                FileOutputStream fos = new FileOutputStream(it.getAbsolutePath() + ".enc")
+
+                byte[] input = new byte[64]
+                int bytesRead
+                while ((bytesRead = fis.read(input)) != -1) {
+                    byte[] output = cipher.update(input, 0, bytesRead)
+                    if (output != null) {
+                        fos.write(output)
+                    }
+                }
+                byte[] output = cipher.doFinal()
+                if (output != null) {
+                    fos.write(output)
+                }
+                fis.close()
+                fos.flush()
+                fos.close()
+
+                it.delete()
+            }
+        }
+    } else {
+        throw new RuntimeException("Old temporary assets found! Try to do a clean project")
+    }
+}
+
+project.afterEvaluate {
+    preBuild.dependsOn encryptAssets
+}
+
+gradle.buildFinished {
+    def tempAssets = new File(getProjectDir(), "/src/main/assets-temp")
+    if (tempAssets.exists()) {
+        println("cleaning encrypted assets...")
+        def encryptedAssets = new File(getProjectDir(), "src/main/assets")
+        encryptedAssets.deleteDir()
+
+        tempAssets.eachFileRecurse (FileType.FILES) { file ->
+            FileInputStream fis = new FileInputStream(file)
+            File fo = new File(file.getAbsolutePath().replace("assets-temp", "assets"))
+            fo.getParentFile().mkdirs()
+            FileOutputStream fos = new FileOutputStream(fo)
+            byte[] buffer = new byte[4096]
+            int n
+            while ((n = fis.read(buffer)) != -1) {
+                fos.write(buffer, 0, n)
+            }
+            fis.close()
+            fos.close()
+        }
+        tempAssets.deleteDir()
+    }
+}
+
+boolean shouldEncrypt() {
+    ArrayList<String> tasks = project.gradle.startParameter.taskNames
+    return SHOULD_ENCRYPT_ASSETS && Arrays.toString(tasks).toLowerCase().contains("release")
+}
+
+repositories {
+    mavenCentral()
+}
