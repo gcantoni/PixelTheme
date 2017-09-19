@@ -1,4 +1,4 @@
-# Pixel Theme for Substratum 
+# Pixel Theme for Substratum [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/folgore95/pixeltheme/blob/master/LICENSE)
 <img src="https://github.com/folgore95/media/blob/master/pixeltheme1.png"/>
 <img src="https://github.com/folgore95/media/blob/master/pixeltheme2.png"/>
 
