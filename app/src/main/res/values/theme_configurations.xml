@@ -19,6 +19,9 @@
 
     <!-- Put your theme changelog here -->
     <string-array name="ThemeChangelog">
-        <item>First release with some material design colors!</item>
+        <item>New material colors: brown, cyan, pink and lime</item>
+        <item>Themed settings icons</item>
+        <item>Fix purple don\'t disturb color</item>
+
     </string-array>
 </resources>
