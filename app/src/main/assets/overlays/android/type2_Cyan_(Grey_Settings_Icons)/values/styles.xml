@@ -4,6 +4,6 @@
         <item name="android:actionBarTheme">@*android:style/ThemeOverlay.DeviceDefault.ActionBar.Accent</item>    
         <item name="android:colorAccent">@*android:color/material_deep_teal_500</item>  
         <item name="android:colorEdgeEffect">#ffffffff</item>    
-        <item name="android:colorControlNormal">#757575</item>   <!--Self-defined-->
+        <item name="android:colorControlNormal">@*android:color/user_icon_default_gray</item>   <!--Self-defined-->
        </style>
 </resources>
