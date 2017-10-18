@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Settings"
+        parent="@android:style/Theme.DeviceDefault.Settings">
+        <item name="android:textColorPrimaryInverse">?android:textColorPrimary</item>
+    </style>
+</resources>
