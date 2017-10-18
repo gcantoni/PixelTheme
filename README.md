@@ -3,11 +3,11 @@
 <img src="https://github.com/folgore95/media/blob/master/pixeltheme2.png"/>
 
 ## About
-A Google Pixel theme for every device with AOSP running substratum (OMS).
+A Pixel theme for every device running substratum (Android 8.0+)
 
 ## What is themed?
 - Navigation Bar ( Filled, Stock AOSP, Stock Google Pixel )
-- SystemUI ( Stock Google Pixel blue color, Stock Nexus teal color, Grey, Red, Purple, Orange, Green and Indigo )
+- SystemUI ( Stock Google Pixel blue color, Stock Nexus teal color, Grey, Red, Purple, Orange, Green, Indigo, Lime, Pink, Brown, Black and Cyan )
 - AOSP & Google Package Installer
 
 ## Download
