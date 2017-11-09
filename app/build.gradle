@@ -32,8 +32,8 @@ android {
         applicationId "it.folgore95.pixel"
         minSdkVersion 24
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 10
+        versionName "1.3"
         buildConfigField "String", "IV_KEY", "\"" + IV_KEY + "\""
         buildConfigField "byte[]", "DECRYPTION_KEY", String.valueOf("\"" + KEY + "\"").replace("\"", "").replace("[", "{").replace("]", "}")
         buildConfigField "byte[]", "IV_KEY", String.valueOf("\"" + IV_KEY + "\"").replace("\"", "").replace("[", "{").replace("]", "}")
