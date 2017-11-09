@@ -19,9 +19,11 @@
 
     <!-- Put your theme changelog here -->
     <string-array name="ThemeChangelog">
-        <item>New material colors: brown, cyan, pink and lime</item>
-        <item>Themed settings icons</item>
-        <item>Fix purple don\'t disturb color</item>
+        <item>Android overlay has been completely rewritten</item>
+        <item>Added new colors: Amber, Deep Orange, Light Green and Magenta</item>
+        <item>Added possibility to change settings icons color with the color you want</item>
+        <item>Added possibility to make settings icons invisible</item>
+        <item>Changed default navbar to pixel instead of filled</item>
 
     </string-array>
 </resources>
