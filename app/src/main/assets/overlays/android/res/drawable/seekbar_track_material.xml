@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:gravity="fill_horizontal|center" android:id="@*android:id/background">
         <shape android:tint="@*android:color/control_nodisable_material" android:shape="rectangle">
-            <size android:height="@*android:dimen/seekbar_track_background_height_material" />
+            <size android:height="2.0dp" />
             <solid android:color="@*android:color/white_disabled_material" />
         </shape>
     </item>
@@ -13,20 +13,20 @@
                 <item android:state_enabled="false" android:drawable="@*android:color/transparent" />
                 <item>
                     <shape android:tint="@*android:color/material_deep_teal_500" android:shape="rectangle">
-                        <size android:height="@*android:dimen/seekbar_track_progress_height_material" />
+                        <size android:height="2.0dp" />
                         <solid android:color="@*android:color/white_disabled_material" />
                     </shape>
                 </item>
             </selector>
         </scale>
     </item>
-    <item android:gravity="fill_horizontal|center" android:id="@id/progress">
+    <item android:gravity="fill_horizontal|center" android:id="@*android:id/progress">
         <scale android:scaleWidth="100%">
             <selector>
                 <item android:state_enabled="false" android:drawable="@*android:color/transparent" />
                 <item>
                     <shape android:tint="@*android:color/material_deep_teal_500" android:shape="rectangle">
-                        <size android:height="@*android:dimen/seekbar_track_progress_height_material" />
+                        <size android:height="2.0dp" />
                         <solid android:color="@*android:color/white" />
                     </shape>
                 </item>
