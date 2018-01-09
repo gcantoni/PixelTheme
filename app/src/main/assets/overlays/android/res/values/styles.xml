@@ -5,5 +5,7 @@
         <item name="android:colorAccent">@*android:color/material_deep_teal_500</item>  
         <item name="android:colorEdgeEffect">#ffffffff</item>    
         <item name="android:colorControlNormal">@*android:color/holo_blue_dark</item>
+        <item name="android:navigationBarColor">#FFF5F5F5</item>
+        <item name="windowLightNavigationBar">true</item>
        </style>
 </resources>
