@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="notification_shade_background_color">#00c6c6c8</color> <!--slide left and right notification bg color-->
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="recents_task_view_rounded_corners_radius">12.0dip</dimen>
+	<dimen name="recents_task_view_shadow_rounded_corners_radius">12.0dip</dimen>
+<dimen name="rounded_corner_radius">12.0dip</dimen>
+<item type="dimen" name="notification_panel_width">392.0dip</item>
+	<dimen name="standard_notification_panel_width">392.0dip</dimen>
+<dimen name="notification_shadow_radius">8.0dip</dimen>
+	<dimen name="notification_divider_height">3dip</dimen>
+	<!-- <dimen name="z_distance_between_notifications">0.5dip</dimen> --> <!-- Notifications shadow -->
+	<dimen name="status_bar_battery_icon_width">9.0dip</dimen>
+<dimen name="status_bar_header_height">124.0dip</dimen>
+<dimen name="status_bar_padding_start">6.0dip</dimen>
+</resources>
+
+
+

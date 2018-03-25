@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@*com.android.systemui:color/notification_material_background_dimmed_color" />
+			<corners android:radius="@*com.android.systemui:dimen/recents_task_view_rounded_corners_radius" />
+        </shape>
+    </item>
+</ripple>

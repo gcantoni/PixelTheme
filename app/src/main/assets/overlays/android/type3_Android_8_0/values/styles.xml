@@ -6,6 +6,5 @@
         <item name="android:colorEdgeEffect">#ffffffff</item>    
         <item name="android:colorControlNormal">@*android:color/holo_blue_dark</item>
         <item name="android:navigationBarColor">#FFF5F5F5</item>
-        <item name="android:windowLightNavigationBar">true</item>
        </style>
 </resources>

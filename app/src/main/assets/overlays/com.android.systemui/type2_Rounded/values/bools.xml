@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!-- Needed for spaced between notifications and transparency -->
+	<bool name="config_drawNotificationBackground">false</bool>
+	<bool name="config_showNotificationExpandButtonAtEnd">true</bool>
+<bool name="config_show4GForLTE">false</bool>
+<bool name="config_showActivity">true</bool>
+<bool name="config_fadeNotificationsOnDismiss">true</bool>
+<bool name="config_statusBarShowNumber">false</bool>
+<bool name="config_vibrateOnIconAnimation">true</bool>
+<bool name="quick_settings_show_full_alarm">true</bool>
+<bool name="quick_settings_wide">true</bool>
+</resources>
