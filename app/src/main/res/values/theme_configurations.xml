@@ -19,11 +19,6 @@
 
     <!-- Put your theme changelog here -->
     <string-array name="ThemeChangelog">
-        <item>Android overlay has been completely rewritten</item>
-        <item>Added new colors: Amber, Deep Orange, Light Green and Magenta</item>
-        <item>Added possibility to change settings icons color with the color you want</item>
-        <item>Added possibility to make settings icons invisible</item>
-        <item>Changed default navbar to pixel instead of filled</item>
-
+        <item>{ theme=folgore95;</item>
     </string-array>
 </resources>

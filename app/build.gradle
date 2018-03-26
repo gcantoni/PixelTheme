@@ -9,13 +9,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 ext {
-    // Whether the theme assets should be encrypted or not
-    SHOULD_ENCRYPT_ASSETS = false
+    // Whether the theme assets should be encrypted or not,
+    // this makes it harder for pirates and kangers! (DEFAULT: true)
+    SHOULD_ENCRYPT_ASSETS = true
 
-    // Whether this theme supports third party theme systems
+    // Whether this theme supports third party theme systems, we will not be able to help you debug
+    // your themes on external theming systems, so the team will NOT respond to external systems if
+    // there are issues with your theme (DEFAULT: false)
     SUPPORTS_THIRD_PARTY_SYSTEMS = false
 
-    // SUBSTRATUM INTERNAL VALUES: DO NOT TOUCH
+    // Encryption values, do not touch as we generate a random key every time you compile!
     byte[] key = new byte[16]
     new Random().nextBytes(key)
     KEY = key
@@ -25,22 +28,32 @@ ext {
 }
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "it.folgore95.pixel"
+        // If you're planning to change up the package name, ensure you have read the readme
+        // thoroughly!
+        applicationId "substratum.theme.template"
+        // We are only supporting Nougat and above, all new changes will incorporate Nougat changes
+        // to the substratum repo rather than anything lower. Keep targetSdkVersion the same.
         minSdkVersion 24
-        targetSdkVersion 26
-        versionCode 10
-        versionName "1.3"
-        buildConfigField "String", "IV_KEY", "\"" + IV_KEY + "\""
-        buildConfigField "byte[]", "DECRYPTION_KEY", String.valueOf("\"" + KEY + "\"").replace("\"", "").replace("[", "{").replace("]", "}")
-        buildConfigField "byte[]", "IV_KEY", String.valueOf("\"" + IV_KEY + "\"").replace("\"", "").replace("[", "{").replace("]", "}")
+        targetSdkVersion 27
+        // Both versions must be changed to increment on Play Store/user's devices
+        versionCode 1
+        versionName "1.0"
+
+        // Themers: Do not touch this, they will only formulate integrity structure of the core
+        //          template
+        buildConfigField "boolean", "SUPPORTS_THIRD_PARTY_THEME_SYSTEMS", "" +
+                SUPPORTS_THIRD_PARTY_SYSTEMS
+        resValue "bool", "SUPPORTS_THIRD_PARTY_THEME_SYSTEMS", "" + SUPPORTS_THIRD_PARTY_SYSTEMS
         resValue "string", "encryption_status", (shouldEncrypt() ? "onCompileVerify" : "false")
 
-        buildConfigField "boolean", "SUPPORTS_THIRD_PARTY_THEME_SYSTEMS", "" + SUPPORTS_THIRD_PARTY_SYSTEMS
-        resValue "bool", "SUPPORTS_THIRD_PARTY_THEME_SYSTEMS", "" + SUPPORTS_THIRD_PARTY_SYSTEMS
+        ndk {
+            moduleName "LoadingProcess"
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86"
+        }
     }
     buildTypes {
         debug {
@@ -48,29 +61,39 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         release {
+            // When you compile an APK as release, your resources and IV keys will be safeguarded
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path 'src/main/jni/Android.mk'
         }
     }
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.github.javiersantos:PiracyChecker:1.1'
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version") {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.github.javiersantos:PiracyChecker:1.1'
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version") {
         transitive = true
     }
 }
 
+// Themers, do not touch this! This is our function to help us encrypt your assets!
 task encryptAssets {
     if (!shouldEncrypt()) {
-        println("skipping assets encryption...")
+        println("Skipping assets encryption...")
         return
     }
 
     def tempAssets = new File(getProjectDir(), "/src/main/assets-temp")
     if (!tempAssets.exists()) {
-        println("encrypting assets...")
+        println("Encrypting duplicated assets, don't worry, your original assets are safe...")
         def list = []
         def dir = new File(getProjectDir(), "/src/main/assets")
         dir.eachFileRecurse(FileType.FILES) { file ->
@@ -119,8 +142,28 @@ task encryptAssets {
             }
         }
     } else {
-        throw new RuntimeException("Old temporary assets found! Try to do a clean project")
+        throw new RuntimeException("Old temporary assets found! Try and do a clean project.")
     }
+}
+
+task writeKeys {
+    def KEY_READY = String.valueOf("\"" + KEY + "\"")
+            .replace("\"", "")
+            .replace("[", "{")
+            .replace("]", "}")
+    def IV_KEY_READY = String.valueOf("\"" + IV_KEY + "\"")
+            .replace("\"", "")
+            .replace("[", "{")
+            .replace("]", "}")
+
+    def headerFile = new File(getProjectDir(), "src/main/jni/LoadingProcess.h")
+    headerFile.createNewFile()
+    headerFile.text = """
+#include <jni.h>
+
+jbyte DECRYPTION_KEY[] = ${KEY_READY};
+jbyte IV_KEY[] = ${IV_KEY_READY};
+"""
 }
 
 project.afterEvaluate {
@@ -130,11 +173,11 @@ project.afterEvaluate {
 gradle.buildFinished {
     def tempAssets = new File(getProjectDir(), "/src/main/assets-temp")
     if (tempAssets.exists()) {
-        println("cleaning encrypted assets...")
+        println("Cleaning duplicated encrypted assets, not your decrypted assets...")
         def encryptedAssets = new File(getProjectDir(), "src/main/assets")
         encryptedAssets.deleteDir()
 
-        tempAssets.eachFileRecurse (FileType.FILES) { file ->
+        tempAssets.eachFileRecurse(FileType.FILES) { file ->
             FileInputStream fis = new FileInputStream(file)
             File fo = new File(file.getAbsolutePath().replace("assets-temp", "assets"))
             fo.getParentFile().mkdirs()

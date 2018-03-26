@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Making a dark theme? You know what to do! -->
+    <style name="DialogStyle" parent="@style/Theme.AppCompat.Dialog.Alert">
+        <item name="android:colorAccent">#4285F4</item>
+    </style>
+    <!--
+      ~ Custom dialog message on theme launch.
+      ~ Add word in launch_dialog_negative to add a cancel button on the dialog
+      -->
+    <string name="launch_dialog_title">Welcome to Pixel Theme</string>
+    <string name="launch_dialog_content">Before starting remember to select your Android version in the top menu. \n\nIf you have issues with an app just reapply the theme and reboot. If you need help join the telegram group for instant support. </string>
+    <string name="launch_dialog_positive">Next</string>
+    <string name="launch_dialog_negative">Support chat</string>
+    <string name="launch_dialog_negative_url">https://t.me/joinchat/D3RTD0OvH7Az0vGNrva_ig</string>
+</resources>
