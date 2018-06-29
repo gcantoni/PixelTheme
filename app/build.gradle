@@ -32,7 +32,7 @@ android {
         minSdkVersion 24
         targetSdkVersion 27
         // Both versions must be changed to increment on Play Store/user's devices
-        versionCode 200
+        versionCode 201
         versionName "4.0"
 
         // Themers: Do not touch this, they will only formulate integrity structure of the core
@@ -69,7 +69,7 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.github.javiersantos:PiracyChecker:1.2.2'
+    implementation 'com.github.javiersantos:PiracyChecker:1.2.3'
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version") {
         transitive = true
     }
