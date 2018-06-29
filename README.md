@@ -12,3 +12,6 @@ A Pixel theme for every device running substratum (Android 8.0+) | <a href="http
  <a href="https://play.google.com/store/apps/details?id=it.folgore95.pixel">
    <img src="https://github.com/folgore95/pixeltheme/blob/master/google-play-badge.png" />
  </a>
+<a href="https://github.com/gcantoni/pixeltheme/releases">
+   <img src="https://github.com/folgore95/pixeltheme/blob/master/github.png" />
+ </a>
