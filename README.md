@@ -9,9 +9,4 @@ A Pixel theme for every device running substratum (Android 8.0+) | <a href="http
  - AOSP & Google Package Installer
  
  ## Download
- <a href="https://play.google.com/store/apps/details?id=it.folgore95.pixel">
-   <img src="https://github.com/folgore95/pixeltheme/blob/master/google-play-badge.png" />
- </a>
-<a href="https://github.com/gcantoni/pixeltheme/releases">
-   <img src="https://github.com/folgore95/pixeltheme/blob/master/github.png" />
- </a>
+ [<img src="https://github.com/folgore95/pixeltheme/blob/master/google-play-badge.png" alt="Get it on Google Play" height="60">](https://play.google.com/store/apps/details?id=it.folgore95.pixel)[<img src="https://github.com/folgore95/pixeltheme/blob/master/github.png" alt="Download APK from GitHub" height="60">](https://github.com/gcantoni/pixeltheme/releases)
