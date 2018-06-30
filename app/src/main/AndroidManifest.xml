@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 	
 	<uses-feature
-        android:name="projekt.substratum.theme"
+        android:name="projekt.it.folgore95"
         android:required="false" /> <!-- Set to true for OMS-rom only block to be enabled -->
 
     <application
@@ -21,7 +21,7 @@
         tools:ignore="GoogleAppIndexingWarning"
         android:extractNativeLibs="false">
 
-        <activity android:name="substratum.theme.template.SubstratumLauncher">
+        <activity android:name=".SubstratumLauncher">
             <intent-filter>
                 <action android:name="projekt.substratum.THEME"/>
                 <category android:name="android.intent.category.DEFAULT"/>
