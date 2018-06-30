@@ -1,4 +1,4 @@
-package substratum.theme.template
+package it.folgore95.pixel
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -9,9 +9,9 @@ import android.content.pm.Signature
 import android.net.Uri
 import android.os.RemoteException
 import android.widget.Toast
-import substratum.theme.template.AdvancedConstants.BLACKLISTED_APPLICATIONS
-import substratum.theme.template.AdvancedConstants.MINIMUM_SUBSTRATUM_VERSION
-import substratum.theme.template.AdvancedConstants.OTHER_THEME_SYSTEMS
+import it.folgore95.pixel.AdvancedConstants.BLACKLISTED_APPLICATIONS
+import it.folgore95.pixel.AdvancedConstants.MINIMUM_SUBSTRATUM_VERSION
+import it.folgore95.pixel.AdvancedConstants.OTHER_THEME_SYSTEMS
 
 @Suppress("ConstantConditionIf")
 object ThemeFunctions {
