@@ -1,6 +1,6 @@
 @file:Suppress("ConstantConditionIf")
 
-package substratum.theme.template
+package it.folgore95.pixel
 
 import android.app.Activity
 import android.content.Context
@@ -16,24 +16,24 @@ import com.github.javiersantos.piracychecker.enums.InstallerID
 import com.github.javiersantos.piracychecker.enums.PiracyCheckerCallback
 import com.github.javiersantos.piracychecker.enums.PiracyCheckerError
 import com.github.javiersantos.piracychecker.enums.PirateApp
-import substratum.theme.template.AdvancedConstants.ENFORCE_MINIMUM_SUBSTRATUM_VERSION
-import substratum.theme.template.AdvancedConstants.MINIMUM_SUBSTRATUM_VERSION
-import substratum.theme.template.AdvancedConstants.ORGANIZATION_THEME_SYSTEMS
-import substratum.theme.template.AdvancedConstants.OTHER_THEME_SYSTEMS
-import substratum.theme.template.AdvancedConstants.SHOW_DIALOG_REPEATEDLY
-import substratum.theme.template.AdvancedConstants.SHOW_LAUNCH_DIALOG
-import substratum.theme.template.AdvancedConstants.SUBSTRATUM_FILTER_CHECK
-import substratum.theme.template.ThemeFunctions.SUBSTRATUM_PACKAGE_NAME
-import substratum.theme.template.ThemeFunctions.checkSubstratumIntegrity
-import substratum.theme.template.ThemeFunctions.getSelfSignature
-import substratum.theme.template.ThemeFunctions.getSelfVerifiedIntentResponse
-import substratum.theme.template.ThemeFunctions.getSelfVerifiedPirateTools
-import substratum.theme.template.ThemeFunctions.getSelfVerifiedThemeEngines
-import substratum.theme.template.ThemeFunctions.getSubstratumFromPlayStore
-import substratum.theme.template.ThemeFunctions.getSubstratumUpdatedResponse
-import substratum.theme.template.ThemeFunctions.hasOtherThemeSystem
-import substratum.theme.template.ThemeFunctions.isCallingPackageAllowed
-import substratum.theme.template.ThemeFunctions.isPackageInstalled
+import it.folgore95.pixel.AdvancedConstants.ENFORCE_MINIMUM_SUBSTRATUM_VERSION
+import it.folgore95.pixel.AdvancedConstants.MINIMUM_SUBSTRATUM_VERSION
+import it.folgore95.pixel.AdvancedConstants.ORGANIZATION_THEME_SYSTEMS
+import it.folgore95.pixel.AdvancedConstants.OTHER_THEME_SYSTEMS
+import it.folgore95.pixel.AdvancedConstants.SHOW_DIALOG_REPEATEDLY
+import it.folgore95.pixel.AdvancedConstants.SHOW_LAUNCH_DIALOG
+import it.folgore95.pixel.AdvancedConstants.SUBSTRATUM_FILTER_CHECK
+import it.folgore95.pixel.ThemeFunctions.SUBSTRATUM_PACKAGE_NAME
+import it.folgore95.pixel.ThemeFunctions.checkSubstratumIntegrity
+import it.folgore95.pixel.ThemeFunctions.getSelfSignature
+import it.folgore95.pixel.ThemeFunctions.getSelfVerifiedIntentResponse
+import it.folgore95.pixel.ThemeFunctions.getSelfVerifiedPirateTools
+import it.folgore95.pixel.ThemeFunctions.getSelfVerifiedThemeEngines
+import it.folgore95.pixel.ThemeFunctions.getSubstratumFromPlayStore
+import it.folgore95.pixel.ThemeFunctions.getSubstratumUpdatedResponse
+import it.folgore95.pixel.ThemeFunctions.hasOtherThemeSystem
+import it.folgore95.pixel.ThemeFunctions.isCallingPackageAllowed
+import it.folgore95.pixel.ThemeFunctions.isPackageInstalled
 
 /**
  * NOTE TO THEMERS
