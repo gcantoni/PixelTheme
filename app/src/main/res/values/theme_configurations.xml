@@ -10,6 +10,7 @@
     <string name="ThemeReadyRequirement">all</string>
     <!-- Theme wallpaper source (must be raw) -->
     <string name="ThemeWallpaperSource"></string>
+    <string name="ThemeHeroOverride">auto</string>
     <!-- Do your theme support substratum legacy? -->
     <!-- If you choose not to support legacy, then change line 12 in AndroidManifest.xml -->
     <!-- from 'false' to 'true' to hide your theme on the Play Store from any stock ROM-->
