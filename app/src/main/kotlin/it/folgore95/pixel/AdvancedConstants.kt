@@ -1,4 +1,4 @@
-package substratum.theme.template
+package it.folgore95.pixel
 
 object AdvancedConstants {
 
@@ -60,3 +60,4 @@ object AdvancedConstants {
             "com.slimroms.omsbackend"
     )
 }
+
