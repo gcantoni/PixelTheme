@@ -1,3 +1,4 @@
+ <img src="https://github.com/folgore95/media/blob/master/pixeltheme1.png"/>
  <img src="https://github.com/folgore95/media/blob/master/pixeltheme2.png"/>
 
  ## About
