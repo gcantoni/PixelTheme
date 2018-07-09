@@ -9,7 +9,6 @@
   <color name="review_histogram_5_bar">@*android:color/material_deep_teal_500</color>
   <color name="testing_program_opt_in_button_bg">@*android:color/material_deep_teal_500</color>
   <color name="vetted_game_feature_rating_fg">@*android:color/material_deep_teal_500</color>
-  <color name="material_deep_teal_500">@*android:color/material_deep_teal_500</color>
   <color name="accent_material_light">@*android:color/material_deep_teal_500</color>
   <color name="flat_card_creator_avatar_background_color">@*android:color/material_deep_teal_500</color>
   <color name="material_deep_teal_200">@*android:color/material_deep_teal_500</color>
