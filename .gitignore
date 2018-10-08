@@ -90,3 +90,4 @@ app/release/output\.json
 # C++
 #############################################################################
 app/.externalNativeBuild
+.DS_Store
