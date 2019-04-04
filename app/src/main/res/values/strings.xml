@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pixel Theme</string>
+    <string name="welcome_title">Welcome to Pixel Theme</string>
+    <string name="welcome_description">Give a fresh new look to your phone \n\u0020by using different accent color combos!</string>
+    <string name="download">Download</string>
+    <string name="attention">ATTENTION</string>
+    <string name="launch_error">Substratum is not currently installed on your phone.</string>
+
+    <string name="ok">OK</string>
+    <string name="info">About</string>
+
+    <string name="support_chat">SUPPORT CHAT</string>
+    <string name="support_chat_link" translatable="false">https://t.me/victorysubstratum</string>
+
+    <string name="sub_link">https://play.google.com/store/apps/details?id=projekt.substratum</string>
+    <string name="open_sub">Open substratum</string>
+
+    <string name="hide">HIDE APP ICON</string>
+    <string name="hide_ok">Yes</string>
+    <string name="hide_text">You will need to uninstall and reinstall the app to be able to see the icon in launcher again. Do you want to hide it?</string>
+    <string name="hide_no">No</string>
+    <string name="hide_success">App has been successfully hidden</string>
+
+    <string name="app_link" translatable="false">https://play.google.com/store/apps/details?id=it.folgore95.pixeltheme</string>
+    <string name="website_link" translatable="false">https://giorgiocantoni.it/</string>
+    <string name="about_pixel_title">Version 7.0 | Play Store</string>
+    <string name="support_development">Support Development</string>
+    <string name="about_rate_title">Rate</string>
+    <string name="about_rate_subtitle">If you like Pixel Theme, rate it on Play Store</string>
+    <string name="about_bug_title">Report bugs</string>
+    <string name="about_bug_subtitle">Report bugs or request new features</string>
+    <string name="about_author">Author</string>
+    <string name="about_author_title">Giorgio Cantoni</string>
+    <string name="about_author_subtitle">I\'m a student and an Android Developer.\nI\'m interested to Android apps development and cars automation.</string>
+    <string name="about_website_title">Visit website</string>
+    <string name="about_lib_mat">Libraries and materials</string>
+
+    <string name="about_library1_title" translatable="false">Substratum Theme Template</string>
+    <string name="about_library1_subtitle" translatable="false">The official Substratum Theme Template actively updated by the team</string>
+    <string name="about_library1_link" translatable="false">https://github.com/substratum/template</string>
+    <string name="about_library2_title" translatable="false">Menu Dialogs</string>
+    <string name="about_library2_subtitle" translatable="false">Customize your Android apps dialogs easily</string>
+    <string name="about_library2_link" translatable="false">https://github.com/gcantoni/MenuDialogs</string>
+    <string name="about_library3_title" translatable="false">Open Sans Font</string>
+    <string name="about_library3_subtitle" translatable="false">It is a humanist sans serif typeface</string>
+    <string name="about_library3_link" translatable="false">https://fonts.google.com/specimen/Open+Sans</string>
+    <string name="about_library4_title" translatable="false">Icons from MaterialDesign</string>
+    <string name="about_library4_subtitle" translatable="false">3600+ Material Design Icons from the Community</string>
+    <string name="about_library4_link" translatable="false">https://github.com/Templarian/MaterialDesign</string>
+    <string name="about_library5_title" translatable="false">Material Components for Android</string>
+    <string name="about_library5_subtitle" translatable="false">They help developers execute Material Design</string>
+    <string name="about_library5_link" translatable="false">https://github.com/material-components/material-components-android</string>
+</resources>

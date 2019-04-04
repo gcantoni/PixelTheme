@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<dimen name="dialog_round">3dp</dimen>
+<dimen name="button_stroke">3dp</dimen>
+<dimen name="button_round">12dp</dimen>
+<dimen name="fab_stroke">3dp</dimen>
+<dimen name="card_round">12dp</dimen>
+</resources>

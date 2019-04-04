@@ -21,6 +21,7 @@
         tools:ignore="GoogleAppIndexingWarning"
         android:extractNativeLibs="false">
 
+        <!-- Substratum App Launcher -->
         <activity android:name=".SubstratumLauncher">
             <intent-filter>
                 <action android:name="projekt.substratum.THEME"/>
@@ -33,6 +34,26 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
+        </activity>
+
+        <!-- Splash Activity -->
+        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- PixelActivity -->
+        <activity android:name=".PixelActivity" android:theme="@style/AppTheme"/>
+
+        <!-- AboutActivity -->
+        <activity android:name=".AboutActivity" android:theme="@style/AppBarTheme" android:label="@string/info">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PixelActivity" />
         </activity>
 
         <meta-data
@@ -64,6 +85,9 @@
         <meta-data
             android:name="Substratum_Encryption"
             android:value="@string/encryption_status"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
     </application>
 
