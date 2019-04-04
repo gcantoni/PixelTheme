@@ -28,7 +28,7 @@ class AboutActivity : AppCompatActivity() {
     }
 
     /**
-     * Back to GACtivity with sw/hw back button
+     * Back to PixelACtivity with sw/hw back button
      */
     override fun onBackPressed() {
         val intent = Intent(this, PixelActivity::class.java)
@@ -37,7 +37,7 @@ class AboutActivity : AppCompatActivity() {
     }
 
     /**
-     * Back to GActivity with ActionBar back button
+     * Back to PixelActivity with ActionBar back button
      * @param item
      * @return
      */
