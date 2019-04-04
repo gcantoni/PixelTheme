@@ -208,6 +208,23 @@
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:id="@+id/about_website"
+                        style="@style/about_entry"
+                        android:onClick="webSite">
+
+                        <ImageView
+                            android:src="@drawable/ic_link"
+                            style="@style/icon" />
+
+                        <TextView
+                            style="@style/about_title_text"
+                            android:fontFamily="@font/open_sans_reg"
+                            android:text="@string/about_website_title"
+                            android:textColor="@color/textPrimaryColor" />
+
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>
