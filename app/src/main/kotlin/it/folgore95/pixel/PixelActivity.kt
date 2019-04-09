@@ -122,8 +122,7 @@ class PixelActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
      * Method for hiding app icon
      */
     fun hideAppIcon(view: View) {
-        val componentName = ComponentName(this, it.folgore95.pixel.PixelActivity::class.java)
-        val p = packageManager
+        val pm = this.packageManager
         // dialog
         val message = AlertDialog.Builder(this, R.style.DialogApp)
         message.setIcon(R.drawable.ic_attention)
@@ -132,7 +131,10 @@ class PixelActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelect
         message.setCancelable(false)
         // yes hides the app
         message.setPositiveButton(getString(R.string.hide_ok)) { dialog, id ->
-            p.setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)
+            pm.setComponentEnabledSetting(ComponentName("it.folgore95.pixel",
+                    "it.folgore95.pixel.SplashActivity"),
+                    PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
+                    PackageManager.DONT_KILL_APP)
             // close the app
             finish()
             // show a toast
