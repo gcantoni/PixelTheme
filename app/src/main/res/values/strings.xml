@@ -10,13 +10,13 @@
     <string name="ok">OK</string>
     <string name="info">About</string>
 
-    <string name="support_chat">SUPPORT CHAT</string>
+    <string name="support_chat">Support chat</string>
     <string name="support_chat_link" translatable="false">https://t.me/victorysubstratum</string>
 
     <string name="sub_link">https://play.google.com/store/apps/details?id=projekt.substratum</string>
     <string name="open_sub">Open substratum</string>
 
-    <string name="hide">HIDE APP ICON</string>
+    <string name="hide">Hide app icon</string>
     <string name="hide_ok">Yes</string>
     <string name="hide_text">You will need to uninstall and reinstall the app to be able to see the icon in launcher again. Do you want to hide it?</string>
     <string name="hide_no">No</string>
@@ -24,8 +24,8 @@
 
     <string name="app_link" translatable="false">https://play.google.com/store/apps/details?id=it.folgore95.pixeltheme</string>
     <string name="website_link" translatable="false">https://giorgiocantoni.it/</string>
-    <string name="about_pixel_title">Version 7.0 | Play Store</string>
-    <string name="support_development">Support Development</string>
+    <string name="about_pixel_title">Version 7.1 | Play Store</string>
+    <string name="support_development">Support development</string>
     <string name="about_rate_title">Rate</string>
     <string name="about_rate_subtitle">If you like Pixel Theme, rate it on Play Store</string>
     <string name="about_bug_title">Report bugs</string>
