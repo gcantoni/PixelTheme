@@ -28,7 +28,7 @@ class AboutActivity : AppCompatActivity() {
     }
 
     /**
-     * Back to PixelACtivity with sw/hw back button
+     * Back to PixelActivity with sw/hw back button
      */
     override fun onBackPressed() {
         val intent = Intent(this, PixelActivity::class.java)
