@@ -142,7 +142,7 @@
                                 style="@style/about_subtitle_text"
                                 android:fontFamily="@font/open_sans_reg"
                                 android:text="@string/about_bug_subtitle"
-                                android:textColor="@color/textSecondaryColor" />
+                                android:textColor="@color/textUnderColor" />
 
                         </LinearLayout>
 
@@ -202,7 +202,7 @@
                                 style="@style/about_subtitle_text"
                                 android:fontFamily="@font/open_sans_reg"
                                 android:text="@string/about_author_subtitle"
-                                android:textColor="@color/textSecondaryColor" />
+                                android:textColor="@color/textUnderColor" />
 
                         </LinearLayout>
 
@@ -271,7 +271,7 @@
                             style="@style/about_subtitle_text"
                             android:fontFamily="@font/open_sans_reg"
                             android:text="@string/about_library1_subtitle"
-                            android:textColor="@color/textSecondaryColor" />
+                            android:textColor="@color/textUnderColor" />
 
                     </LinearLayout>
 
@@ -290,7 +290,7 @@
                             style="@style/about_subtitle_text"
                             android:fontFamily="@font/open_sans_reg"
                             android:text="@string/about_library2_subtitle"
-                            android:textColor="@color/textSecondaryColor" />
+                            android:textColor="@color/textUnderColor" />
 
                     </LinearLayout>
 
@@ -309,7 +309,7 @@
                             style="@style/about_subtitle_text"
                             android:fontFamily="@font/open_sans_reg"
                             android:text="@string/about_library3_subtitle"
-                            android:textColor="@color/textSecondaryColor" />
+                            android:textColor="@color/textUnderColor" />
 
                     </LinearLayout>
 
@@ -328,7 +328,7 @@
                             style="@style/about_subtitle_text"
                             android:fontFamily="@font/open_sans_reg"
                             android:text="@string/about_library4_subtitle"
-                            android:textColor="@color/textSecondaryColor" />
+                            android:textColor="@color/textUnderColor" />
 
                     </LinearLayout>
 
@@ -347,7 +347,7 @@
                             style="@style/about_subtitle_text"
                             android:fontFamily="@font/open_sans_reg"
                             android:text="@string/about_library5_subtitle"
-                            android:textColor="@color/textSecondaryColor" />
+                            android:textColor="@color/textUnderColor" />
 
                     </LinearLayout>
 

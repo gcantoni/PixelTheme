@@ -18,11 +18,7 @@
     </style>
 
     <!-- Dialog Theme -->
-    <style name="DialogApp" parent="@style/Theme.AppCompat.Dialog.Alert">
-        <item name="android:textColor">@color/textPrimaryColor</item>
-        <item name="android:textColorPrimary">@color/textPrimaryColor</item>
-        <item name="android:colorBackground">@color/colorPrimaryDark</item>
-        <item name="android:colorAccent">@color/colorPrimary</item>
+    <style name="DialogApp" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="android:windowBackground">@drawable/dialog_theme</item>
         <item name="android:textAppearanceSmall">@style/MyTextAppearance</item>
         <item name="android:textAppearanceMedium">@style/MyTextAppearance</item>
