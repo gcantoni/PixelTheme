@@ -49,7 +49,7 @@
         <activity android:name=".PixelActivity" android:theme="@style/AppTheme"/>
 
         <!-- AboutActivity -->
-        <activity android:name=".AboutActivity" android:theme="@style/AppBarTheme" android:label="@string/info">
+        <activity android:name=".AboutActivity" android:theme="@style/AppBarTheme" android:label="@string/info" android:noHistory="true">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
