@@ -5,6 +5,7 @@
     <color name="colorAccent">#3f7aff</color>
     <color name="colorWhite">#fff</color>
     <color name="colorBottom">#fff</color>
+    <color name="colorDivider">#40000000</color>
     <color name="textPrimaryColor">#212121</color>
     <color name="iconPrimaryColor">#212121</color>
     <color name="textSecondaryColor">#212121</color>

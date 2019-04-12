@@ -51,7 +51,7 @@
         android:layout_height="1dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:background="@android:color/transparent"
+        android:background="@color/colorDivider"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_margin="20dp" />
@@ -71,7 +71,7 @@
         app:icon="@drawable/ic_chat"
         app:iconTint="@color/colorWhite"
         app:strokeColor="@color/colorPrimary"
-        app:strokeWidth="@dimen/button_stroke" />
+        app:strokeWidth="@dimen/button_stroke"/>
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"

@@ -28,9 +28,8 @@
                 app:cardUseCompatPadding="true"
                 app:cardBackgroundColor="@color/colorPrimaryDark"
                 android:paddingTop="20dp"
-                app:cardCornerRadius="@dimen/card_round"
-                app:strokeColor="@color/colorAccent"
-                app:strokeWidth="@dimen/button_stroke">
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="@dimen/card_round">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -96,11 +95,10 @@
                 android:layout_height="wrap_content"
                 app:cardUseCompatPadding="true"
                 app:cardBackgroundColor="@color/colorPrimaryDark"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:paddingTop="20dp"
-                app:cardCornerRadius="@dimen/card_round"
-                app:strokeColor="@color/colorPrimary"
-                app:strokeWidth="@dimen/button_stroke">
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="@dimen/card_round">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -115,8 +113,38 @@
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/open_sans_reg"
                         android:text="@string/support_development"
-                        android:textColor="@color/textPrimaryColor"
+                        android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/about_github"
+                        style="@style/about_entry"
+                        android:onClick="repoGithub">
+
+                        <ImageView
+                            android:src="@drawable/ic_github"
+                            style="@style/icon" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/about_title_text"
+                                android:fontFamily="@font/open_sans_reg"
+                                android:text="@string/about_github_title"
+                                android:textColor="@color/textPrimaryColor" />
+
+                            <TextView
+                                style="@style/about_subtitle_text"
+                                android:fontFamily="@font/open_sans_reg"
+                                android:text="@string/about_github_subtitle"
+                                android:textColor="@color/textUnderColor" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
 
                     <LinearLayout
                         android:id="@+id/about_debug"
@@ -157,11 +185,10 @@
                 android:layout_height="wrap_content"
                 app:cardUseCompatPadding="true"
                 app:cardBackgroundColor="@color/colorPrimaryDark"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:paddingTop="20dp"
-                app:cardCornerRadius="@dimen/card_round"
-                app:strokeColor="@color/colorPrimary"
-                app:strokeWidth="@dimen/button_stroke">
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="@dimen/card_round">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -176,7 +203,7 @@
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/open_sans_reg"
                         android:text="@string/about_author"
-                        android:textColor="@color/textPrimaryColor"
+                        android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -234,11 +261,10 @@
                 android:layout_height="wrap_content"
                 app:cardUseCompatPadding="true"
                 app:cardBackgroundColor="@color/colorPrimaryDark"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="0dp"
                 android:paddingTop="20dp"
-                app:cardCornerRadius="@dimen/card_round"
-                app:strokeColor="@color/colorPrimary"
-                app:strokeWidth="@dimen/button_stroke">
+                app:cardElevation="@dimen/card_elevation"
+                app:cardCornerRadius="@dimen/card_round">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -253,7 +279,7 @@
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/open_sans_reg"
                         android:text="@string/about_lib_mat"
-                        android:textColor="@color/textPrimaryColor"
+                        android:textColor="@color/colorAccent"
                         android:textStyle="bold" />
 
                     <LinearLayout

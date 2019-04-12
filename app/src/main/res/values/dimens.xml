@@ -2,7 +2,8 @@
 <resources>
 <dimen name="dialog_round">3dp</dimen>
 <dimen name="button_stroke">3dp</dimen>
-<dimen name="button_round">12dp</dimen>
+<dimen name="button_round">32dp</dimen>
 <dimen name="fab_stroke">3dp</dimen>
-<dimen name="card_round">12dp</dimen>
+<dimen name="card_round">8dp</dimen>
+<dimen name="card_elevation">4dp</dimen>
 </resources>
