@@ -38,8 +38,6 @@ class AboutActivity : AppCompatActivity() {
 
     /**
      * Back to PixelActivity with ActionBar back button
-     * @param item
-     * @return
      */
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
@@ -52,7 +50,6 @@ class AboutActivity : AppCompatActivity() {
 
     /**
      * Rate App
-     * @param view
      */
     fun rateApp(view: View) {
         val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.app_link)))
@@ -61,10 +58,17 @@ class AboutActivity : AppCompatActivity() {
 
     /**
      * Website
-     * @param view
      */
     fun webSite(view: View) {
         val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.website_link)))
+        startActivity(browserIntent)
+    }
+
+    /**
+     * Github
+     */
+    fun repoGithub(view: View) {
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.github_link)))
         startActivity(browserIntent)
     }
 
@@ -81,7 +85,6 @@ class AboutActivity : AppCompatActivity() {
 
     /**
      * Libraries and Materials
-     * @param view
      */
     fun library1(view: View) {
         val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.about_library1_link)))
